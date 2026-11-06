@@ -1,0 +1,13 @@
+{
+  "name": "wcag-cadastro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Página de cadastro de demonstração, em HTML, CSS e JavaScript sem framework.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,14 @@
+# Dependências e saídas geradas localmente
+node_modules/
+coverage/
+.nyc_output/
+dist/
+build/
+
+# Logs do npm
+npm-debug.log*
+*.log
+
+# Pastas locais do pi e do Fito
+.pi/
+output/

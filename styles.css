@@ -1,0 +1,131 @@
+:root {
+  --texto: #1a1a1a;
+  --texto-suave: #4a4a4a;
+  --fundo: #ffffff;
+  --borda: #6b6b6b;
+  --foco: #1a5fb4;
+  --erro: #b00020;
+  --erro-fundo: #fdecee;
+  --sucesso: #1e6b34;
+  --sucesso-fundo: #e8f5ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+main {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.aviso {
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+}
+
+.campo > label,
+.campo > span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.dica {
+  margin: 0 0 0.25rem;
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+}
+
+input[aria-invalid="true"] {
+  border: 2px solid var(--erro);
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--foco);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: var(--borda);
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+.erro {
+  margin: 0.25rem 0 0;
+  color: var(--erro);
+  font-weight: 600;
+}
+
+.resumo-erros {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  color: var(--texto);
+  background: var(--erro-fundo);
+  border: 1px solid var(--erro);
+  border-radius: 4px;
+}
+
+.resumo-erros h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.resumo-erros ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.resumo-erros a {
+  color: var(--erro);
+}
+
+.confirmacao {
+  padding: 1rem;
+  color: var(--sucesso);
+  background: var(--sucesso-fundo);
+  border: 1px solid var(--sucesso);
+  border-radius: 4px;
+}
