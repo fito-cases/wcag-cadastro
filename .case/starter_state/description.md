@@ -1,0 +1,1 @@
+A página de cadastro inicial parece aceitar entradas, mas a finalidade de alguns campos é difícil de identificar e o retorno após um envio inválido dificulta a correção sem perda de dados apropriados. A construção do projeto inicial deverá deixar testes de comportamento observável falhando; confira os resultados de `npm test` antes de começar.

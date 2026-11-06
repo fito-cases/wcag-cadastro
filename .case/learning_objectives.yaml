@@ -1,0 +1,9 @@
+learning_objectives:
+  - knowledge_component: usage-scenario:wcag.associar-nomes-acessiveis-aos-campos-do-formulario
+    bloom_level: APPLICATION
+    description: "Corrigir a identificação visual e acessível dos campos do cadastro."
+    weight: primary
+  - knowledge_component: usage-scenario:wcag.reapresentar-entradas-invalidas-com-erros-corrigiveis
+    bloom_level: APPLICATION
+    description: "Corrigir o retorno do formulário após entradas inválidas, para que a pessoa consiga localizar e resolver os problemas sem perder dados apropriados."
+    weight: primary

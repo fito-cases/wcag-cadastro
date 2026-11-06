@@ -1,0 +1,5 @@
+deliverables:
+  - type: code_change
+    description: "Página de cadastro com campos identificáveis e retorno após entrada inválida que permita localizar erros, conservar dados apropriados e tentar novamente."
+  - type: tests_passing
+    description: "Suíte de testes do projeto passando com npm test, incluindo os testes de identificação dos erros, preservação de dados e nova submissão."

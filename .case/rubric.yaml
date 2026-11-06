@@ -1,0 +1,44 @@
+criteria:
+  - id: identificacao-dos-campos
+    title: "Identificação dos campos na interface e na navegação assistida"
+    knowledge_component: usage-scenario:wcag.associar-nomes-acessiveis-aos-campos-do-formulario
+    bloom_level: APPLICATION
+    weight: 45
+    levels:
+      - score: 0
+        label: not_achieved
+        description: "A intervenção não permite reconhecer a finalidade dos campos avaliados na interface ou por seus nomes acessíveis; as barreiras de identificação persistem de modo substancial."
+      - score: 1
+        label: partial
+        description: "A intervenção torna reconhecível a finalidade de alguns campos avaliados, mas ainda há campos ambíguos na interface ou na navegação assistida; a identificação exigida permanece incompleta."
+      - score: 2
+        label: achieved
+        description: "A intervenção torna reconhecível a finalidade de todos os campos avaliados tanto na interface quanto em seus nomes acessíveis; a pessoa consegue distinguir a função de cada campo ao percorrer o formulário."
+      - score: 3
+        label: exemplary
+        description: "Todos os campos avaliados têm finalidade clara visualmente e por nome acessível; essa clareza também se mantém durante o preenchimento e ao revisar os dados já inseridos, sem ambiguidade contextual."
+    evaluation_method:
+      type: ai
+      prompt_hint: "Avalie na página resultante a finalidade de todos os campos avaliados tanto na interface quanto nos nomes acessíveis, inclusive após preenchimento e durante revisão. Diferencie cobertura parcial, completa e clareza sustentada; ofereça feedback sobre a experiência, sem alegar conformidade geral com a WCAG nem exigir técnica específica."
+  - id: correcao-de-entradas-invalidas
+    title: "Retorno corrigível após submissão inválida"
+    knowledge_component: usage-scenario:wcag.reapresentar-entradas-invalidas-com-erros-corrigiveis
+    bloom_level: APPLICATION
+    weight: 55
+    levels:
+      - score: 0
+        label: not_achieved
+        description: "Na saída de npm test, nenhum dos testes nomeados de identificação dos erros, preservação de dados e nova submissão passa; o retorno testado após entrada inválida não foi alcançado."
+      - score: 1
+        label: partial
+        description: "Na saída de npm test, passa pelo menos um, mas não todos, os testes nomeados de identificação dos erros, preservação de dados e nova submissão; o retorno corrigível testado permanece incompleto."
+      - score: 2
+        label: achieved
+        description: "Na saída de npm test, passam todos os testes nomeados de identificação dos erros, preservação de dados e nova submissão; os três comportamentos exigidos de retorno após entrada inválida foram demonstrados pelo comando."
+      - score: 3
+        label: exemplary
+        description: "Na saída de npm test, passam os três testes nomeados e todos os demais testes da suíte, sem falhas indicadas; os comportamentos exigidos são demonstrados sem regressões detectadas pela suíte."
+    evaluation_method:
+      type: automated
+      command: "npm test"
+      passing_condition: "A saída de npm test identifica nominalmente e marca como aprovados os testes de identificação dos erros, preservação de dados e nova submissão; para o nível 3, todos os demais testes também passam e o comando termina com código 0."

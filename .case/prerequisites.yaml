@@ -1,0 +1,9 @@
+prerequisites:
+  - knowledge_component: concept:wcag.label
+    bloom_level: COMPREHENSION
+    description: "A função dos rótulos apresentados ao usuário na identificação de controles."
+    mandatory: true
+  - knowledge_component: concept:wcag.input-error
+    bloom_level: KNOWLEDGE
+    description: "O que caracteriza um erro de entrada em um formulário."
+    mandatory: true

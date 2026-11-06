@@ -1,0 +1,6 @@
+# Contrato para o projeto inicial; verificar os nomes e os resultados após construir a fonte.
+failing_tests:
+  - "identificação dos erros após submissão inválida"
+  - "preservação de dados após submissão inválida"
+  - "nova submissão após correção"
+build_status: failing

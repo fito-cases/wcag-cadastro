@@ -1,0 +1,14 @@
+title: "Recuperar a acessibilidade de um formulário de cadastro"
+type: diagnostic
+version: "1.0.0"
+status: draft
+estimated_duration_minutes: 45
+language: pt-br
+tags: [acessibilidade, formularios, cadastro, diagnostico]
+authors:
+  - name: "Paulo Sérgio Medeiros dos Santos"
+    email: pasemes@gmail.com
+submission:
+  method: pull_request
+  target_branch: v1.0.0
+  student_branch: solution

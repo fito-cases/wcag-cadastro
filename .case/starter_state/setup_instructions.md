@@ -1,0 +1,1 @@
+Antes da primeira execução, instale Node.js 22 ou mais recente e confirme que `node` e `npm` estão disponíveis no terminal. No diretório do projeto, execute `npm test` para conferir o estado inicial. O projeto usa o executor de testes nativo do Node.js e não requer dependências externas de teste.
