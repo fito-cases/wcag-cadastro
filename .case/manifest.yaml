@@ -1,7 +1,7 @@
 title: "Recuperar a acessibilidade de um formulário de cadastro"
 type: diagnostic
 version: "1.0.0"
-status: draft
+status: published
 estimated_duration_minutes: 45
 language: pt-br
 tags: [acessibilidade, formularios, cadastro, diagnostico]
