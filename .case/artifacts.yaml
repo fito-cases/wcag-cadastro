@@ -1,1 +1,25 @@
-artifacts: []
+artifacts:
+  - path: index.html
+    role: target
+    description: "Página do cadastro e identificação dos campos apresentados à pessoa usuária."
+  - path: app.js
+    role: target
+    description: "Comportamento do cadastro e retorno após uma tentativa de envio."
+  - path: styles.css
+    role: scaffold
+    description: "Apresentação visual da página e dos estados de retorno."
+  - path: test/cadastro.test.js
+    role: evidence
+    description: "Testes observáveis do envio, dos erros, da preservação dos dados e da nova tentativa."
+  - path: test/smoke.test.js
+    role: evidence
+    description: "Verificação básica da configuração do projeto de testes."
+  - path: test/support/dom.js
+    role: scaffold
+    description: "Ambiente de teste do formulário para execução no Node.js."
+  - path: package.json
+    role: reference
+    description: "Configuração do comando npm test e da versão mínima do Node.js."
+  - path: .gitignore
+    role: scaffold
+    description: "Exclusões de arquivos gerados localmente durante o trabalho no projeto."
