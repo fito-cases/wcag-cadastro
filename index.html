@@ -12,7 +12,7 @@
     <h1>Cadastro</h1>
     <p class="aviso">Página de demonstração: a confirmação acontece só nesta página, e nenhum dado é enviado a um servidor.</p>
 
-    <div id="erros" class="resumo-erros" hidden></div>
+    <div id="erros" class="resumo-erros" tabindex="-1" hidden></div>
 
     <form id="cadastro" novalidate>
       <p class="dica">Todos os campos são obrigatórios.</p>
@@ -20,18 +20,22 @@
       <div class="campo">
         <label for="nome">Nome completo</label>
         <input id="nome" name="nome" type="text" autocomplete="name" required>
+        <p id="nome-erro" class="erro" hidden></p>
       </div>
 
       <div class="campo">
         <label for="codigo">CEP (código postal)</label>
         <p id="codigo-dica" class="dica">8 dígitos, só números, sem hífen. Exemplo: 20040020</p>
         <input id="codigo" name="codigo" type="text" inputmode="numeric" autocomplete="postal-code" required aria-describedby="codigo-dica">
+        <p id="codigo-erro" class="erro" hidden></p>
       </div>
 
       <button type="submit">Enviar cadastro</button>
     </form>
 
-    <p id="confirmacao" class="confirmacao" role="status" hidden></p>
+    <div role="status">
+      <p id="confirmacao" class="confirmacao" hidden></p>
+    </div>
   </main>
 </body>
 </html>

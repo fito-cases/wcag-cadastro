@@ -111,6 +111,11 @@ button:disabled {
   border-radius: 4px;
 }
 
+.resumo-erros:focus {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
 .resumo-erros h2 {
   margin: 0 0 0.5rem;
   font-size: 1.125rem;
