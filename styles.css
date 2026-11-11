@@ -42,8 +42,7 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
-.campo > label,
-.campo > span {
+.campo > label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -53,6 +52,10 @@ h1 {
   margin: 0 0 0.25rem;
   color: var(--texto-suave);
   font-size: 0.9375rem;
+}
+
+form > .dica {
+  margin-bottom: 1.25rem;
 }
 
 input {

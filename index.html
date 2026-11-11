@@ -15,16 +15,20 @@
     <div id="erros" class="resumo-erros" hidden></div>
 
     <form id="cadastro" novalidate>
+      <p class="dica">Todos os campos são obrigatórios.</p>
+
       <div class="campo">
-        <span>Nome</span>
-        <input id="nome" name="nome" type="text" autocomplete="name">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required>
       </div>
 
       <div class="campo">
-        <input id="codigo" name="codigo" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="Código postal (8 dígitos)">
+        <label for="codigo">CEP (código postal)</label>
+        <p id="codigo-dica" class="dica">8 dígitos, só números, sem hífen. Exemplo: 20040020</p>
+        <input id="codigo" name="codigo" type="text" inputmode="numeric" autocomplete="postal-code" required aria-describedby="codigo-dica">
       </div>
 
-      <button type="submit">Enviar</button>
+      <button type="submit">Enviar cadastro</button>
     </form>
 
     <p id="confirmacao" class="confirmacao" role="status" hidden></p>
