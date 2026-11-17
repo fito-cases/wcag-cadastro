@@ -13,12 +13,48 @@
     return;
   }
 
-  const botao = formulario.querySelector('button[type="submit"]');
+  const listaErros = document.getElementById('lista-erros');
+  const campos = [
+    {
+      controle: document.getElementById('nome'),
+      erro: document.getElementById('nome-erro'),
+      validar: (valor) => valor.trim() !== '',
+      mensagem: 'Nome: informe seu nome.',
+    },
+    {
+      controle: document.getElementById('codigo'),
+      erro: document.getElementById('codigo-erro'),
+      validar: (valor) => /^\d{8}$/.test(valor.trim()),
+      mensagem: 'Código postal: informe exatamente 8 dígitos, sem espaços ou hífen.',
+    },
+  ];
 
-  function dadosValidos() {
-    const nome = document.getElementById('nome').value.trim();
-    const codigo = document.getElementById('codigo').value.trim();
-    return nome !== '' && /^\d{8}$/.test(codigo);
+  function atualizarErros() {
+    listaErros.textContent = '';
+    for (const { controle, erro, validar, mensagem } of campos) {
+      const invalido = !validar(controle.value);
+      erro.textContent = invalido ? mensagem : '';
+      erro.hidden = !invalido;
+      if (!invalido) {
+        controle.removeAttribute('aria-invalid');
+        continue;
+      }
+
+      controle.setAttribute('aria-invalid', 'true');
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.setAttribute('href', `#${controle.id}`);
+      link.textContent = mensagem;
+      link.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        controle.focus();
+      });
+      item.appendChild(link);
+      listaErros.appendChild(item);
+    }
+
+    resumo.hidden = listaErros.children.length === 0;
+    return resumo.hidden;
   }
 
   formulario.addEventListener('submit', (evento) => {
@@ -26,16 +62,11 @@
     confirmacao.hidden = true;
     confirmacao.textContent = '';
 
-    if (!dadosValidos()) {
-      resumo.textContent = 'Não foi possível concluir o cadastro.';
-      resumo.hidden = false;
-      formulario.reset();
-      botao.disabled = true;
+    if (!atualizarErros()) {
+      resumo.focus();
       return;
     }
 
-    resumo.textContent = '';
-    resumo.hidden = true;
     const nome = document.getElementById('nome').value.trim();
     confirmacao.textContent = `Cadastro de ${nome} concluído nesta página de demonstração. Nenhum dado foi enviado a um servidor.`;
     confirmacao.hidden = false;
